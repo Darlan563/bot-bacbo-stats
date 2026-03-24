@@ -7,7 +7,7 @@ st.set_page_config(page_title="BacBo Pro", layout="centered")
 
 # 2. DEPOIS VOCÊ COLOCA AS SUAS CONFIGURAÇÕES:
 TOKEN = "8787083495:AAFlFbZ3VGk8zj-11vqxVdCKWFoxdyqHKPc"
-CHAT_ID = 123456789 # <--- COLOQUE O SEU ID AQUI (SÓ NÚMEROS)
+CHAT_ID = 5274158834
 
 bot = telebot.TeleBot(TOKEN)
 
