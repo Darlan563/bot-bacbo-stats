@@ -1,7 +1,7 @@
 import telebot # Nova biblioteca para o Telegram
 
 # COLOQUE SEUS DADOS AQUI
-TOKEN = AAFlFbZ3VGk8zj-11vqxVdCKWFoxdyqHKPc
+TOKEN = 8787083495:AAFlFbZ3VGk8zj-11vqxVdCKWFoxdyqHKPc
 CHAT_ID = 5274158834
 
 bot = telebot.TeleBot(TOKEN)
