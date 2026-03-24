@@ -1,20 +1,16 @@
+import telebot # Nova biblioteca para o Telegram
 
-import streamlit as st
-import pandas as pd
-import telebot
-
-# --- CONFIGURAÇÃO DO TELEGRAM ---
-# Substitui o que está entre aspas pelos teus dados do BotFather e UserInfoBot
-TOKEN = 8787083495:AAFlFbZ3VGk8zj-11vqxVdCKWFoxdyqHKPc
+# COLOQUE SEUS DADOS AQUI
+TOKEN = AAFlFbZ3VGk8zj-11vqxVdCKWFoxdyqHKPc
 CHAT_ID = 5274158834
 
 bot = telebot.TeleBot(TOKEN)
 
-def enviar_telegram(msg):
+def enviar_sinal(mensagem):
     try:
-        bot.send_message(CHAT_ID, msg)
-    except Exception as e:
-        st.error(f"Erro no Telegram: {e}")
+        bot.send_message(CHAT_ID, mensagem)
+    except:
+        pass
 
 # --- INTERFACE DO DASHBOARD ---
 st.set_page_config(page_title="BacBo Pro", layout="centered")
@@ -46,3 +42,4 @@ st.write(f"Últimos: {st.session_state.historico[-10:]}")
 if st.session_state.historico:
     df = pd.DataFrame(st.session_state.historico, columns=['Res'])
     st.bar_chart(df['Res'].value_counts())
+    
